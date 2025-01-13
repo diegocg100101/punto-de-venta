@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".venta">
+
+  <Button
+      android:id="@+id/button13"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:onClick="agregarVenta"
+      android:text="Agregar a la venta"
+      app:cornerRadius="10sp"
+      app:icon="@drawable/car"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/etCodigoVenta"
+      app:layout_constraintVertical_bias="0.128" />
+
+  <EditText
+      android:id="@+id/etCodigoVenta"
+      android:layout_width="294dp"
+      android:layout_height="44dp"
+      android:ems="10"
+      android:hint="@string/codigo"
+      android:inputType="number"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.122" />
+
+  <Button
+      android:id="@+id/btnPagar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:onClick="pagar"
+      android:text="Pagar"
+      app:cornerRadius="10sp"
+      app:icon="@drawable/cash"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.502"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/etCodigoVenta"
+      app:layout_constraintVertical_bias="0.825" />
+
+  <TextView
+      android:id="@+id/textView17"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Código del artículo"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.508"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.082" />
+
+  <TextView
+      android:id="@+id/tvTotal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Total: $0"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.932" />
+
+  <TextView
+      android:id="@+id/tvNombre"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Artículo: "
+      app:layout_constraintBottom_toTopOf="@+id/btnPagar"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/etCodigoVenta"
+      app:layout_constraintVertical_bias="0.05" />
+
+  <EditText
+      android:id="@+id/etPago"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:gravity="center"
+      android:hint="@string/efectivo"
+      android:inputType="numberDecimal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.881"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.663" />
+
+  <TextView
+      android:id="@+id/tvPago"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Pagó con:"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.645"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.626" />
+
+  <TextView
+      android:id="@+id/tvCambio"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Cambio: $0"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.772"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/tipoPago"
+      app:layout_constraintVertical_bias="0.153" />
+
+  <TextView
+      android:id="@+id/textView21"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Tipo de pago:"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.054"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.626" />
+
+  <RadioGroup
+      android:id="@+id/tipoPago"
+      android:layout_width="139dp"
+      android:layout_height="85dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.058"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.729">
+
+    <RadioButton
+        android:id="@+id/rbEfectivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Efectivo" />
+
+    <RadioButton
+        android:id="@+id/rbTarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tarjeta" />
+  </RadioGroup>
+
+  <EditText
+      android:id="@+id/etArticulos"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:gravity="center"
+      android:inputType="textMultiLine"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.451" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

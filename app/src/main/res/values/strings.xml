@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name" translatable="false">Punto de venta</string>
+    <string name="user" translatable="false">Ingresa tu usuario</string>
+    <string name="password" translatable="false">Ingresa tu contraseña</string>
+    <string name="codigo" translatable="false">Ingresa el código del artículo</string>
+    <string name="nombre" translatable="false">Ingresa el nombre del artículo</string>
+    <string name="descripcion" translatable="false">Ingresa la descripción del artículo</string>
+    <string name="costo" translatable="false">$</string>
+    <string name="porcentaje" translatable="false">%</string>
+    <string name="venta" translatable="false">$</string>
+    <string name="cantidad" translatable="false">Unidades</string>
+    <string name="efectivo" translatable="false">Ingrese el pago</string>
+</resources>
